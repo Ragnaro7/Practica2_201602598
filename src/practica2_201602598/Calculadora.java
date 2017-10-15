@@ -109,6 +109,7 @@ String dato,operacion,estado;
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculadora-201602598");
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setText("3");
@@ -327,8 +328,11 @@ String dato,operacion,estado;
         });
         getContentPane().add(jButton27, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 340, 120, 30));
         getContentPane().add(txtnumero, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 50, 380, 20));
+
+        txtresultado.setEditable(false);
         getContentPane().add(txtresultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, 380, 20));
 
+        txtpila.setEditable(false);
         txtpila.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
                 txtpilaPropertyChange(evt);

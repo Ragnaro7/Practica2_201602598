@@ -52,12 +52,15 @@ DefaultTableModel modelo;
     }
     
     public String[][] Llenar(){
-        int filas=modelo.getRowCount();
+        int filas=1+modelo.getRowCount();
         int columnas=modelo.getColumnCount();
         String excel[][]=new String[filas][columnas];
-        for(int i=0;i<filas;i++){
+        excel[0][0]="Datos";
+        excel[0][1]="Operacion";
+        excel[0][2]="Estado";
+        for(int i=1;i<filas;i++){
             for(int j=0;j<columnas;j++){
-                excel[i][j]=(String)modelo.getValueAt(i, j);
+                excel[i][j]=(String)modelo.getValueAt(i-1, j);
             }
         }
         return excel;
